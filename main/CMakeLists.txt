@@ -1,0 +1,22 @@
+idf_component_register(
+    SRCS
+        "main.cpp"
+        "mylib/mpu9250/mpu9250.cpp"
+        "mylib/receiver/receiver.cpp"
+        "mylib/imu_fusion/simple_imu_fusion.cpp"
+        "mylib/filter/simple_filter.cpp"
+        "mylib/esc/pwm_esc.cpp"
+        "mylib/utility/utility.cpp"
+    PRIV_REQUIRES
+        spi_flash
+        driver
+        esp_timer
+    INCLUDE_DIRS
+        "mylib/mpu9250"
+        "mylib/receiver"
+        "mylib/math"
+        "mylib/imu_fusion"
+        "mylib/filter"
+        "mylib/esc"
+        "mylib/utility"
+)
